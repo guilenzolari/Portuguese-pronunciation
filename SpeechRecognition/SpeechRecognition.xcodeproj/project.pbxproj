@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */; };
+		7AD504FA2C650BA400743982 /* mao.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7AD504F92C650BA400743982 /* mao.m4a */; };
 		AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */; };
 		AAC94A402C63A971005BF94D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC94A3F2C63A971005BF94D /* ContentView.swift */; };
 		AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC94A412C63A973005BF94D /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
+		7AD504F92C650BA400743982 /* mao.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mao.m4a; sourceTree = "<group>"; };
 		AAC94A3A2C63A971005BF94D /* SpeechRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionApp.swift; sourceTree = "<group>"; };
 		AAC94A3F2C63A971005BF94D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +38,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AD504EE2C64F75100743982 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AD504EF2C64F76000743982 /* Sounds */,
+				AAC94A412C63A973005BF94D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7AD504EF2C64F76000743982 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7AD504F92C650BA400743982 /* mao.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		AAC94A312C63A971005BF94D = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +77,8 @@
 				AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */,
 				AAC94A3F2C63A971005BF94D /* ContentView.swift */,
 				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
-				AAC94A412C63A973005BF94D /* Assets.xcassets */,
+				7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */,
+				7AD504EE2C64F75100743982 /* Resources */,
 				AAC94A432C63A973005BF94D /* Preview Content */,
 			);
 			path = SpeechRecognition;
@@ -128,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD504FA2C650BA400743982 /* mao.m4a in Resources */,
 				AAC94A452C63A973005BF94D /* Preview Assets.xcassets in Resources */,
 				AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */,
 			);
@@ -143,6 +166,7 @@
 				AAC94A402C63A971005BF94D /* ContentView.swift in Sources */,
 				AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */,
 				AAC94A4C2C63A9EA005BF94D /* SpeechRecognizer.swift in Sources */,
+				7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 45ZRHMBAB6;
+				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";
@@ -307,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 45ZRHMBAB6;
+				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";

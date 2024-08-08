@@ -9,7 +9,7 @@ import SwiftUI
 import Speech
 import AVFoundation
 
-class SpeechRecognizer: ObservableObject {
+final class SpeechRecognizer: ObservableObject {
     private var speechRecognizer: SFSpeechRecognizer?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?

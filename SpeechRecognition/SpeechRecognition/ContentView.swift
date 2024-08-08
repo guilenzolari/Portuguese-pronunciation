@@ -12,12 +12,13 @@ import AVFoundation
 struct ContentView: View {
     @ObservedObject var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State private var isRecording = false
-
+    @StateObject var audioPlayer = AudioPlayerViewModel()
+    
     var body: some View {
         VStack {
             Text(speechRecognizer.transcribedText)
                 .padding()
-
+            
             Button(action: {
                 if self.isRecording {
                     self.speechRecognizer.stopRecording()
@@ -46,6 +47,17 @@ struct ContentView: View {
             Text(speechRecognizer.comparisonResult ? "Word Matched!" : "Word Not Matched")
                 .padding()
                 .foregroundColor(speechRecognizer.comparisonResult ? .green : .red)
+
+            //play audio button
+            Button(action: {
+                audioPlayer.loadAudio(named: "mao", ofType: "m4a")
+                audioPlayer.playOrPause()
+            }) {
+                Image(systemName: audioPlayer.isPlaying ? "pause.circle" : "play.circle")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+            }
+            
         }
         .onAppear {
             self.speechRecognizer.requestAuthorization()
