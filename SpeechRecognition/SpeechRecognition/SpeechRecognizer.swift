@@ -8,24 +8,26 @@
 import SwiftUI
 import Speech
 import AVFoundation
+import Observation
 
-class SpeechRecognizer: ObservableObject {
+@Observable
+class SpeechRecognizer {
+    
     private var speechRecognizer: SFSpeechRecognizer?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
-    @Published var transcribedText = ""
-    @Published var comparisonResult = false
+    @MainActor var transcribedText = ""
+    var comparisonResult = false
+    var comparisionWord: String
     
-    private var targetWord: String
-    private var audioFile: AVAudioFile?
-    private var audioPlayer: AVAudioPlayer?
-    private let audioFilename = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("recording.mp3")
-    
+    let audioRecorder: AudioRecorder
+
     init(targetWord: String) {
         self.speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "pt-BR"))
-        self.targetWord = targetWord
+        self.comparisionWord = targetWord
+        self.audioRecorder = AudioRecorder()
         requestAuthorization()
     }
 
@@ -48,7 +50,7 @@ class SpeechRecognizer: ObservableObject {
         }
     }
 
-    func startRecording() {
+    func startSpeechRecording() {
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
 
         let inputNode = audioEngine.inputNode
@@ -62,20 +64,20 @@ class SpeechRecognizer: ObservableObject {
             if let result = result {
                 DispatchQueue.main.async {
                     self.transcribedText = result.bestTranscription.formattedString
-                    self.compareTranscription(with: self.targetWord)
+                    self.compareSpeechTranscription(with: self.comparisionWord)
                 }
             }
 
             if let error = error {
                 print("Recognition error: \(error.localizedDescription)")
-                self.stopRecording()
+                self.stopSpeechRecording()
             }
         }
 
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
         do {
-            audioFile = try AVAudioFile(forWriting: audioFilename, settings: recordingFormat.settings)
+            try audioRecorder.startRecording(with: recordingFormat)
         } catch {
             print("Failed to create AVAudioFile: \(error.localizedDescription)")
         }
@@ -83,7 +85,7 @@ class SpeechRecognizer: ObservableObject {
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, when in
             self.recognitionRequest?.append(buffer)
             do {
-                try self.audioFile?.write(from: buffer)
+                try self.audioRecorder.recordingWriteBuffer(buffer: buffer)
             } catch {
                 print("Failed to write audio buffer: \(error.localizedDescription)")
             }
@@ -98,7 +100,7 @@ class SpeechRecognizer: ObservableObject {
         }
     }
 
-    func stopRecording() {
+    func stopSpeechRecording() {
         audioEngine.stop()
         recognitionRequest?.endAudio()
         recognitionTask?.cancel()
@@ -107,17 +109,9 @@ class SpeechRecognizer: ObservableObject {
         inputNode.removeTap(onBus: 0)
     }
     
-    private func compareTranscription(with word: String) {
+    @MainActor func compareSpeechTranscription(with word: String) {
         self.comparisonResult = transcribedText.lowercased().contains(word.lowercased())
         print("Comparison Result: \(self.comparisonResult)")
     }
-    
-    func playRecording() {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
-            audioPlayer?.play()
-        } catch {
-            print("Failed to play audio: \(error.localizedDescription)")
-        }
-    }
+
 }

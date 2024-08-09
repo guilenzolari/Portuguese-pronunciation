@@ -7,10 +7,9 @@
 
 import SwiftUI
 import Speech
-import AVFoundation
 
 struct ContentView: View {
-    @ObservedObject var speechRecognizer = SpeechRecognizer(targetWord: "oi")
+    var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State private var isRecording = false
 
     var body: some View {
@@ -20,9 +19,9 @@ struct ContentView: View {
 
             Button(action: {
                 if self.isRecording {
-                    self.speechRecognizer.stopRecording()
+                    self.speechRecognizer.stopSpeechRecording()
                 } else {
-                    self.speechRecognizer.startRecording()
+                    self.speechRecognizer.startSpeechRecording()
                 }
                 self.isRecording.toggle()
             }) {
@@ -34,7 +33,7 @@ struct ContentView: View {
             }
             
             Button(action: {
-                self.speechRecognizer.playRecording()
+                self.speechRecognizer.audioRecorder.playRecording()
             }) {
                 Text("Play Recording")
                     .padding()
@@ -46,9 +45,6 @@ struct ContentView: View {
             Text(speechRecognizer.comparisonResult ? "Word Matched!" : "Word Not Matched")
                 .padding()
                 .foregroundColor(speechRecognizer.comparisonResult ? .green : .red)
-        }
-        .onAppear {
-            self.speechRecognizer.requestAuthorization()
         }
         .padding()
     }

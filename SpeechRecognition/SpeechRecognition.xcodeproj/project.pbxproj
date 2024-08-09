@@ -12,6 +12,7 @@
 		AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC94A412C63A973005BF94D /* Assets.xcassets */; };
 		AAC94A452C63A973005BF94D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC94A442C63A973005BF94D /* Preview Assets.xcassets */; };
 		AAC94A4C2C63A9EA005BF94D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */; };
+		AAFBC8382C6623B700D985AA /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBC8372C6623B700D985AA /* AudioRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AAC94A412C63A973005BF94D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC94A442C63A973005BF94D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		AAFBC8372C6623B700D985AA /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		AAC94A3C2C63A971005BF94D /* SpeechRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				AAFBC8372C6623B700D985AA /* AudioRecorder.swift */,
 				AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */,
 				AAC94A3F2C63A971005BF94D /* ContentView.swift */,
 				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				AAC94A402C63A971005BF94D /* ContentView.swift in Sources */,
 				AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */,
+				AAFBC8382C6623B700D985AA /* AudioRecorder.swift in Sources */,
 				AAC94A4C2C63A9EA005BF94D /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
