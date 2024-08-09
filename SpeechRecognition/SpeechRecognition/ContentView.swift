@@ -50,7 +50,6 @@ struct ContentView: View {
 
             //play audio button
             Button(action: {
-                audioPlayer.loadAudio(named: "mao", ofType: "m4a")
                 audioPlayer.playOrPause()
             }) {
                 Image(systemName: audioPlayer.isPlaying ? "pause.circle" : "play.circle")
