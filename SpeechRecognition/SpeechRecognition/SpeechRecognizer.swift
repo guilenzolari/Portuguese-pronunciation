@@ -11,8 +11,7 @@ import AVFoundation
 import Observation
 
 @Observable
-class SpeechRecognizer {
-    
+final class SpeechRecognizer {
     private var speechRecognizer: SFSpeechRecognizer?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
@@ -113,5 +112,4 @@ class SpeechRecognizer {
         self.comparisonResult = transcribedText.lowercased().contains(word.lowercased())
         print("Comparison Result: \(self.comparisonResult)")
     }
-
 }

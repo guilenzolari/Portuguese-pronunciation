@@ -11,12 +11,13 @@ import Speech
 struct ContentView: View {
     var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State private var isRecording = false
-
+    @StateObject var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
+    
     var body: some View {
         VStack {
             Text(speechRecognizer.transcribedText)
                 .padding()
-
+            
             Button(action: {
                 if self.isRecording {
                     self.speechRecognizer.stopSpeechRecording()
@@ -45,6 +46,16 @@ struct ContentView: View {
             Text(speechRecognizer.comparisonResult ? "Word Matched!" : "Word Not Matched")
                 .padding()
                 .foregroundColor(speechRecognizer.comparisonResult ? .green : .red)
+
+            //play audio button
+            Button(action: {
+                audioPlayer.playOrPause()
+            }) {
+                Image(systemName: audioPlayer.isPlaying ? "pause.circle" : "play.circle")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+            }
+            
         }
         .padding()
     }
