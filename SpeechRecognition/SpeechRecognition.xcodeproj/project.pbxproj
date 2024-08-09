@@ -57,6 +57,31 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		7AD504FE2C664FD400743982 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAC94A3F2C63A971005BF94D /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AD504FF2C664FFE00743982 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AD505002C66500700743982 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AAFBC8372C6623B700D985AA /* AudioRecorder.swift */,
+				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
+				7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AAC94A312C63A971005BF94D = {
 			isa = PBXGroup;
 			children = (
@@ -76,11 +101,10 @@
 		AAC94A3C2C63A971005BF94D /* SpeechRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				AAFBC8372C6623B700D985AA /* AudioRecorder.swift */,
 				AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */,
-				AAC94A3F2C63A971005BF94D /* ContentView.swift */,
-				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
-				7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */,
+				7AD505002C66500700743982 /* ViewModel */,
+				7AD504FF2C664FFE00743982 /* Model */,
+				7AD504FE2C664FD400743982 /* View */,
 				7AD504EE2C64F75100743982 /* Resources */,
 				AAC94A432C63A973005BF94D /* Preview Content */,
 			);
