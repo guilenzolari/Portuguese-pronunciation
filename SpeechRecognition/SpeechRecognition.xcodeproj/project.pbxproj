@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */; };
 		7AD504FA2C650BA400743982 /* mao.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7AD504F92C650BA400743982 /* mao.m4a */; };
+		7AD505022C66511B00743982 /* ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD505012C66511B00743982 /* ReadData.swift */; };
+		7AD505042C66524D00743982 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD505032C66524D00743982 /* Lesson.swift */; };
+		7AD505062C66530D00743982 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AD505052C66530D00743982 /* lessons.json */; };
 		AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */; };
 		AAC94A402C63A971005BF94D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC94A3F2C63A971005BF94D /* ContentView.swift */; };
 		AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC94A412C63A973005BF94D /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 		7AD504F92C650BA400743982 /* mao.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mao.m4a; sourceTree = "<group>"; };
+		7AD505012C66511B00743982 /* ReadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadData.swift; sourceTree = "<group>"; };
+		7AD505032C66524D00743982 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		7AD505052C66530D00743982 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
 		AAC94A3A2C63A971005BF94D /* SpeechRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionApp.swift; sourceTree = "<group>"; };
 		AAC94A3F2C63A971005BF94D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 		7AD504FF2C664FFE00743982 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7AD505032C66524D00743982 /* Lesson.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AAFBC8372C6623B700D985AA /* AudioRecorder.swift */,
+				7AD505012C66511B00743982 /* ReadData.swift */,
 				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
 				7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */,
 			);
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC94A3D2C63A971005BF94D /* SpeechRecognitionApp.swift */,
+				7AD505052C66530D00743982 /* lessons.json */,
 				7AD505002C66500700743982 /* ViewModel */,
 				7AD504FF2C664FFE00743982 /* Model */,
 				7AD504FE2C664FD400743982 /* View */,
@@ -180,6 +189,7 @@
 				7AD504FA2C650BA400743982 /* mao.m4a in Resources */,
 				AAC94A452C63A973005BF94D /* Preview Assets.xcassets in Resources */,
 				AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */,
+				7AD505062C66530D00743982 /* lessons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +203,9 @@
 				AAC94A402C63A971005BF94D /* ContentView.swift in Sources */,
 				AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */,
 				AAFBC8382C6623B700D985AA /* AudioRecorder.swift in Sources */,
+				7AD505022C66511B00743982 /* ReadData.swift in Sources */,
 				AAC94A4C2C63A9EA005BF94D /* SpeechRecognizer.swift in Sources */,
+				7AD505042C66524D00743982 /* Lesson.swift in Sources */,
 				7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
