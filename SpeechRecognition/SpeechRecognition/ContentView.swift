@@ -12,7 +12,7 @@ import AVFoundation
 struct ContentView: View {
     @ObservedObject var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State private var isRecording = false
-    @StateObject var audioPlayer = AudioPlayerViewModel()
+    @StateObject var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
     
     var body: some View {
         VStack {
