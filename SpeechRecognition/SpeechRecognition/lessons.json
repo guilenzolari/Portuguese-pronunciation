@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Lição 1: Saudação",
+        "description": "Aprenda a dizer diferentes formas de saudação em inglês.",
+        "words": [
+            {
+                "word": "Hello",
+                "phonetic": "həˈləʊ",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Hi",
+                "phonetic": "haɪ",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Good morning",
+                "phonetic": "ɡʊd ˈmɔːrnɪŋ",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            }
+        ]
+    },
+    {
+        "title": "Lição 2: Despedida",
+        "description": "Aprenda a dizer diferentes formas de despedida em inglês.",
+        "words": [
+            {
+                "word": "Goodbye",
+                "phonetic": "ɡʊdˈbaɪ",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "See you",
+                "phonetic": "siː juː",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Take care",
+                "phonetic": "teɪk keə",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            }
+        ]
+    },
+    {
+        "title": "Lição 3: Agradecimento",
+        "description": "Aprenda a dizer diferentes formas de agradecimento em inglês.",
+        "words": [
+            {
+                "word": "Thank you",
+                "phonetic": "θæŋk juː",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Thanks",
+                "phonetic": "θæŋks",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Much appreciated",
+                "phonetic": "mʌtʃ əˈpriːʃɪeɪtɪd",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            }
+        ]
+    },
+    {
+        "title": "Lição 4: Desculpas",
+        "description": "Aprenda a dizer diferentes formas de pedir desculpas em inglês.",
+        "words": [
+            {
+                "word": "Sorry",
+                "phonetic": "ˈsɒri",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "My apologies",
+                "phonetic": "maɪ əˈpɒlədʒiz",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Excuse me",
+                "phonetic": "ɪkˈskjuːz miː",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            }
+        ]
+    },
+    {
+        "title": "Lição 5: Pergunta básica",
+        "description": "Aprenda a perguntar como as pessoas estão em inglês.",
+        "words": [
+            {
+                "word": "How are you?",
+                "phonetic": "haʊ ɑːr juː",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "How's it going?",
+                "phonetic": "haʊz ɪt ˈɡoʊɪŋ",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "What's up?",
+                "phonetic": "wɒts ʌp",
+                "audioFileName": "mao",
+                "audioFormat": "m4a"
+            }
+        ]
+    }
+]
