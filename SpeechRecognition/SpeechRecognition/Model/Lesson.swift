@@ -12,29 +12,33 @@ struct Lesson: Codable, Identifiable, Hashable {
         return lhs.id == rhs.id &&
                lhs.title == rhs.title &&
                lhs.description == rhs.description &&
-               lhs.words == rhs.words
+               lhs.sentences == rhs.sentences &&
+               lhs.sfSymbol == rhs.sfSymbol
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(title)
         hasher.combine(description)
-        hasher.combine(words)
+        hasher.combine(sentences)
+        hasher.combine(sfSymbol)
     }
     
     enum CodingKeys: String, CodingKey {
         case title
         case description
-        case words
+        case sentences
+        case sfSymbol
     }
     
     var id = UUID()
     var title: String
     var description: String
-    var words: [Word]
+    var sentences: [Sentence]
+    var sfSymbol: String
     
-    struct Word: Codable, Hashable {
-        var word: String
+    struct Sentence: Codable, Hashable {
+        var sentence: String
         var phonetic: String
         var audioFileName: String
         var audioFormat: String
