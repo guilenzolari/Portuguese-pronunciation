@@ -32,6 +32,7 @@ struct LessonCard: View {
                         Text(description)
                             .fontWeight(.regular)
                             .font(.system(size: 12))
+                            .lineLimit(2)
                             .foregroundStyle(.black)
                     }
                     .padding()
@@ -41,11 +42,11 @@ struct LessonCard: View {
                 .background {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(Color(.lightGray))
-                        .frame(width: 352, height: 100)
                 }
                 .padding()
             }
         })
+        .frame(width: 352, height: 100)
     }
 }
 

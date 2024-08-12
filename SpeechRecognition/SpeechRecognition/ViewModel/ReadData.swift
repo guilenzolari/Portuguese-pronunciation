@@ -15,7 +15,7 @@ class ReadData: ObservableObject  {
     }
     
     func loadData()  {
-        guard let url = Bundle.main.url(forResource: "Userdata", withExtension: "json")
+        guard let url = Bundle.main.url(forResource: "lessons", withExtension: "json")
             else {
                 print("Json file not found")
                 return
