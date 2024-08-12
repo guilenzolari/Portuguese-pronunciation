@@ -3,9 +3,9 @@
         "title": "Categoria 1: Cores",
         "description": "Aprenda a identificar e descrever diferentes cores em português.",
         "sfSymbol": "paintpalette.fill",
-        "words": [
+        "sentences": [
             {
-                "word": "Amarelo",
+                "sentence": "Amarelo",
                 "phonetic": "amaˈʁɛlu",
                 "audioFileName": "amarelo",
                 "audioFormat": "m4a"
@@ -17,7 +17,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Azul",
+                "sentence": "Azul",
                 "phonetic": "aˈzul",
                 "audioFileName": "azul",
                 "audioFormat": "m4a"
@@ -29,7 +29,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Verde",
+                "sentence": "Verde",
                 "phonetic": "ˈveʁdʒi",
                 "audioFileName": "verde",
                 "audioFormat": "m4a"
@@ -41,7 +41,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Vermelho",
+                "sentence": "Vermelho",
                 "phonetic": "veʁˈmeʎu",
                 "audioFileName": "vermelho",
                 "audioFormat": "m4a"
@@ -58,9 +58,9 @@
         "title": "Categoria 2: Frutas",
         "description": "Aprenda sobre diferentes frutas e como descrevê-las em português.",
         "sfSymbol": "tree.fill",
-        "words": [
+        "sentences": [
             {
-                "word": "Banana",
+                "sentence": "Banana",
                 "phonetic": "baˈnɐnɐ",
                 "audioFileName": "banana",
                 "audioFormat": "m4a"
@@ -72,7 +72,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Melancia",
+                "sentence": "Melancia",
                 "phonetic": "meɫɐnˈsia",
                 "audioFileName": "melancia",
                 "audioFormat": "m4a"
@@ -84,7 +84,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Uva",
+                "sentence": "Uva",
                 "phonetic": "ˈuvɐ",
                 "audioFileName": "uva",
                 "audioFormat": "m4a"
@@ -96,7 +96,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "word": "Laranja",
+                "sentence": "Laranja",
                 "phonetic": "laˈɾɐ̃ʒɐ",
                 "audioFileName": "laranja",
                 "audioFormat": "m4a"

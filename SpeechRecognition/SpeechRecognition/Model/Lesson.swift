@@ -11,16 +11,18 @@ struct Lesson: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case title
         case description
-        case words
+        case sentences
+        case sfSymbol
     }
     
     var id = UUID()
     var title: String
     var description: String
-    var words: [Word]
+    var sentences: [Sentence]
+    var sfSymbol: String
     
-    struct Word: Codable {
-        var word: String
+    struct Sentence: Codable {
+        var sentence: String
         var phonetic: String
         var audioFileName: String
         var audioFormat: String
