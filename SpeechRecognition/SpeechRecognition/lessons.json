@@ -1,120 +1,110 @@
 [
     {
-        "title": "Lição 1: Saudação",
-        "description": "Aprenda a dizer diferentes formas de saudação em inglês.",
+        "title": "Categoria 1: Cores",
+        "description": "Aprenda a identificar e descrever diferentes cores em português.",
+        "sfSymbol": "paintpalette.fill",
         "words": [
             {
-                "word": "Hello",
-                "phonetic": "həˈləʊ",
-                "audioFileName": "mao",
+                "word": "Amarelo",
+                "phonetic": "amaˈʁɛlu",
+                "audioFileName": "amarelo",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Hi",
-                "phonetic": "haɪ",
-                "audioFileName": "mao",
+                "sentence": "O sol estava brilhando em um tom intenso de amarelo.",
+                "phonetic": "o sɔw isˈtavɐ bɾiˈʎɐ̃du ẽ ũ tõ ĩˈtẽsu dʒi amaˈʁɛlu",
+                "audioFileName": "fraseAmarelo",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Good morning",
-                "phonetic": "ɡʊd ˈmɔːrnɪŋ",
-                "audioFileName": "mao",
+                "word": "Azul",
+                "phonetic": "aˈzul",
+                "audioFileName": "azul",
+                "audioFormat": "m4a"
+            },
+            {
+                "sentence": "O céu azul sem nuvens era um lindo cenário para a tarde.",
+                "phonetic": "u sɛw aˈzul sɛ̃ ˈnuvẽs ˈɛɾɐ ũ ˈlĩdu seˈnaɾju ˈpaɾɐ a ˈtaʁdʒi",
+                "audioFileName": "fraseAzul",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Verde",
+                "phonetic": "ˈveʁdʒi",
+                "audioFileName": "verde",
+                "audioFormat": "m4a"
+            },
+            {
+                "sentence": "As folhas verdes das árvores balançavam com o vento.",
+                "phonetic": "az ˈfoʎɐs ˈveʁdʒis dɐs ˈaʁvoɾis bɐˈlɐ̃sɐvɐ̃ kõ u ˈvẽtu",
+                "audioFileName": "fraseVerde",
+                "audioFormat": "m4a"
+            },
+            {
+                "word": "Vermelho",
+                "phonetic": "veʁˈmeʎu",
+                "audioFileName": "vermelho",
+                "audioFormat": "m4a"
+            },
+            {
+                "sentence": "Ela escolheu um vestido vermelho para a festa.",
+                "phonetic": "ˈɛlɐ iskoˈʎew ũ veˈʃtʃidu veʁˈmeʎu ˈpaɾɐ a ˈfɛstɐ",
+                "audioFileName": "fraseVermelho",
                 "audioFormat": "m4a"
             }
         ]
     },
     {
-        "title": "Lição 2: Despedida",
-        "description": "Aprenda a dizer diferentes formas de despedida em inglês.",
+        "title": "Categoria 2: Frutas",
+        "description": "Aprenda sobre diferentes frutas e como descrevê-las em português.",
+        "sfSymbol": "tree.fill",
         "words": [
             {
-                "word": "Goodbye",
-                "phonetic": "ɡʊdˈbaɪ",
-                "audioFileName": "mao",
+                "word": "Banana",
+                "phonetic": "baˈnɐnɐ",
+                "audioFileName": "banana",
                 "audioFormat": "m4a"
             },
             {
-                "word": "See you",
-                "phonetic": "siː juː",
-                "audioFileName": "mao",
+                "sentence": "A banana é uma das frutas mais consumidas no mundo.",
+                "phonetic": "a baˈnɐnɐ ɛ ˈumɐ dʒiˈzɐ ˈfɾutɐs mãjs kõsuˈmidɐs nu ˈmũdu",
+                "audioFileName": "fraseBanana",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Take care",
-                "phonetic": "teɪk keə",
-                "audioFileName": "mao",
-                "audioFormat": "m4a"
-            }
-        ]
-    },
-    {
-        "title": "Lição 3: Agradecimento",
-        "description": "Aprenda a dizer diferentes formas de agradecimento em inglês.",
-        "words": [
-            {
-                "word": "Thank you",
-                "phonetic": "θæŋk juː",
-                "audioFileName": "mao",
+                "word": "Melancia",
+                "phonetic": "meɫɐnˈsia",
+                "audioFileName": "melancia",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Thanks",
-                "phonetic": "θæŋks",
-                "audioFileName": "mao",
+                "sentence": "Comprei uma melancia bem fresca para a sobremesa.",
+                "phonetic": "kõˈpɾej ˈumɐ meɫɐnˈsia bẽj ˈfɾɛskɐ ˈpaɾɐ a sobɾeˈmezɐ",
+                "audioFileName": "fraseMelancia",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Much appreciated",
-                "phonetic": "mʌtʃ əˈpriːʃɪeɪtɪd",
-                "audioFileName": "mao",
-                "audioFormat": "m4a"
-            }
-        ]
-    },
-    {
-        "title": "Lição 4: Desculpas",
-        "description": "Aprenda a dizer diferentes formas de pedir desculpas em inglês.",
-        "words": [
-            {
-                "word": "Sorry",
-                "phonetic": "ˈsɒri",
-                "audioFileName": "mao",
+                "word": "Uva",
+                "phonetic": "ˈuvɐ",
+                "audioFileName": "uva",
                 "audioFormat": "m4a"
             },
             {
-                "word": "My apologies",
-                "phonetic": "maɪ əˈpɒlədʒiz",
-                "audioFileName": "mao",
+                "sentence": "As uvas verdes são minhas favoritas por serem mais azedinhas.",
+                "phonetic": "az ˈuvɐs ˈveʁdʒis sãw ˈmiɲɐs favɔˈɾitɐs poʁ ˈseɾẽj majs azediˈɲɐs",
+                "audioFileName": "fraseUva",
                 "audioFormat": "m4a"
             },
             {
-                "word": "Excuse me",
-                "phonetic": "ɪkˈskjuːz miː",
-                "audioFileName": "mao",
-                "audioFormat": "m4a"
-            }
-        ]
-    },
-    {
-        "title": "Lição 5: Pergunta básica",
-        "description": "Aprenda a perguntar como as pessoas estão em inglês.",
-        "words": [
-            {
-                "word": "How are you?",
-                "phonetic": "haʊ ɑːr juː",
-                "audioFileName": "mao",
+                "word": "Laranja",
+                "phonetic": "laˈɾɐ̃ʒɐ",
+                "audioFileName": "laranja",
                 "audioFormat": "m4a"
             },
             {
-                "word": "How's it going?",
-                "phonetic": "haʊz ɪt ˈɡoʊɪŋ",
-                "audioFileName": "mao",
-                "audioFormat": "m4a"
-            },
-            {
-                "word": "What's up?",
-                "phonetic": "wɒts ʌp",
-                "audioFileName": "mao",
+                "sentence": "Prefiro tomar suco de laranja no café da manhã.",
+                "phonetic": "pɾeˈfiɾu toˈmaʁ ˈsuku dʒi laˈɾɐ̃ʒɐ nu kaˈfɛ dɐ mɐˈɲɐ",
+                "audioFileName": "fraseLaranja",
                 "audioFormat": "m4a"
             }
         ]
