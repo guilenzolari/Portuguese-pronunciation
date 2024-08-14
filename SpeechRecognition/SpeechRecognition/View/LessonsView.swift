@@ -20,7 +20,6 @@ struct LessonsView: View {
             }
         }
     }
-
 }
 
 #Preview {
