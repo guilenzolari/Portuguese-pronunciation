@@ -9,9 +9,25 @@ import SwiftUI
 
 @main
 struct SpeechRecognitionApp: App {
+    
+    @ObservedObject var router = Router()
+    
     var body: some Scene {
         WindowGroup {
-            LessonsView()
+            NavigationStack(path: $router.navPath) {
+                LessonsView(viewModel: LessonsViewModel())
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                        case .colorsLessonsView:
+                            ColorLessonView()
+                        case .fruitsLessonsView:
+                            FruitsLessonView()
+                        default:
+                            EmptyView()
+                        }
+                    }
+            }
+            .environmentObject(router)
         }
     }
 }

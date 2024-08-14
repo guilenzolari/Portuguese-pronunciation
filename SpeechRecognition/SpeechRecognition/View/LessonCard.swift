@@ -12,14 +12,20 @@ struct LessonCard: View {
     var lessonText: String
     var description: String
     
-    init(lessonText: String, description: String) {
+    @EnvironmentObject var router: Router
+    var destination: Router.Destination
+    
+    init(lessonText: String,
+         description: String,
+         destination: Router.Destination) {
         self.lessonText = lessonText
         self.description = description
+        self.destination = destination
     }
     
     var body: some View {
         Button(action: {
-            print("OI")
+            router.navigate(to: destination)
         }, label: {
             ZStack {
                 HStack {
@@ -48,9 +54,4 @@ struct LessonCard: View {
         })
         .frame(width: 352, height: 100)
     }
-}
-
-#Preview {
-    LessonCard(lessonText: "Lição 1",
-               description: "Expanda seu vocabulário sobre frutas")
 }

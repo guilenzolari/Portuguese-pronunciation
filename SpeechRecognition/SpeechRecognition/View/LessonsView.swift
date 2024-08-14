@@ -9,16 +9,20 @@ import SwiftUI
 
 struct LessonsView: View {
     
-    @ObservedObject var datas = ReadData()
+    var viewModel: LessonsViewModel
     
     var body: some View {
-        ForEach(datas.lessons, id: \.self) { lessons in
-            LessonCard(lessonText: lessons.title,
-                       description: lessons.description)
+        VStack {
+            ForEach(viewModel.datas.lessons, id: \.self) { lesson in
+                LessonCard(lessonText: lesson.title,
+                           description: lesson.description,
+                           destination: viewModel.changeScreen(for: lesson.category))
+            }
         }
     }
+
 }
 
 #Preview {
-    LessonsView()
+    LessonsView(viewModel: LessonsViewModel())
 }
