@@ -1,7 +1,7 @@
 [
     {
-        "title": "Categoria 1: Cores",
-        "description": "Aprenda a identificar e descrever diferentes cores em português.",
+        "title": "Colors",
+        "description": "Expand your color vocabulary.",
         "category": "Colors",
         "sfSymbol": "paintpalette.fill",
         "sentences": [
@@ -56,8 +56,8 @@
         ]
     },
     {
-        "title": "Categoria 2: Frutas",
-        "description": "Aprenda sobre diferentes frutas e como descrevê-las em português.",
+        "title": "Fruits",
+        "description": "Learn to talk about fruits in various contexts and situations.",
         "category": "Fruits",
         "sfSymbol": "tree.fill",
         "sentences": [
