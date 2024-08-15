@@ -78,7 +78,6 @@ struct LessonsView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                 )
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
