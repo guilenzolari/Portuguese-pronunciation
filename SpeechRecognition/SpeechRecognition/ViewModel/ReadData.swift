@@ -24,7 +24,5 @@ class ReadData: ObservableObject  {
         let data = try? Data(contentsOf: url)
         let lessons = try? JSONDecoder().decode([Lesson].self, from: data!)
         self.lessons = lessons!
-        
     }
-     
 }
