@@ -25,7 +25,7 @@ struct OnboardingView: View {
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
                 
                 if currentIndex == 1 {
-                    NavigationLink(destination: LessonsView()) {
+                    NavigationLink(destination: LessonsView(viewModel: LessonsViewModel())) {
                         Text("Continue")
                             .bold()
                             .frame(maxWidth: .infinity, maxHeight: 45)
