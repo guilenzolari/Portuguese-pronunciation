@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct SpeechRecognitionApp: App {
+    @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
+        
     var body: some Scene {
         WindowGroup {
-            LessonsView()
+            if hasSeenOnboarding {
+                LessonsView()
+            } else {
+                OnboardingView()
+            }
         }
     }
 }

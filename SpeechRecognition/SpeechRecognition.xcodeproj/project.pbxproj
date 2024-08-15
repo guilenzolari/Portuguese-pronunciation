@@ -21,6 +21,8 @@
 		AAFBC8382C6623B700D985AA /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBC8372C6623B700D985AA /* AudioRecorder.swift */; };
 		AAFBC83A2C6650C600D985AA /* LessonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBC8392C6650C600D985AA /* LessonCard.swift */; };
 		AAFBC83C2C6659ED00D985AA /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBC83B2C6659ED00D985AA /* LessonsView.swift */; };
+		FA2245962C6CEFE1003081BB /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */; };
+		FA2245982C6CF8D7003081BB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245972C6CF8D7003081BB /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		AAFBC8372C6623B700D985AA /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		AAFBC8392C6650C600D985AA /* LessonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCard.swift; sourceTree = "<group>"; };
 		AAFBC83B2C6659ED00D985AA /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		FA2245972C6CF8D7003081BB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				AAFBC8392C6650C600D985AA /* LessonCard.swift */,
 				AAC94A3F2C63A971005BF94D /* SentenceView.swift */,
 				7AEB5E1B2C6CD3CF0020E588 /* ProgressBar.swift */,
+				FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */,
+				FA2245972C6CF8D7003081BB /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC94A402C63A971005BF94D /* SentenceView.swift in Sources */,
+				FA2245982C6CF8D7003081BB /* OnboardingView.swift in Sources */,
 				AAC94A3E2C63A971005BF94D /* SpeechRecognitionApp.swift in Sources */,
 				AAFBC8382C6623B700D985AA /* AudioRecorder.swift in Sources */,
 				7AD505022C66511B00743982 /* ReadData.swift in Sources */,
@@ -251,6 +258,7 @@
 				AAFBC83C2C6659ED00D985AA /* LessonsView.swift in Sources */,
 				7AEB5E1C2C6CD3CF0020E588 /* ProgressBar.swift in Sources */,
 				AAFBC83A2C6650C600D985AA /* LessonCard.swift in Sources */,
+				FA2245962C6CEFE1003081BB /* OnboardingCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 8JTQ9M4J69;
+				DEVELOPMENT_TEAM = 5DQLC63RNN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";
@@ -415,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 8JTQ9M4J69;
+				DEVELOPMENT_TEAM = 5DQLC63RNN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";
