@@ -10,24 +10,30 @@ import SwiftUI
 @main
 struct SpeechRecognitionApp: App {
     
+    @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
     @ObservedObject var router = Router()
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $router.navPath) {
-                LessonsView(viewModel: LessonsViewModel())
-                    .navigationDestination(for: Router.Destination.self) { destination in
-                        switch destination {
-                        case .colorsLessonsView:
-                            ColorLessonView()
-                        case .fruitsLessonsView:
-                            FruitsLessonView()
-                        default:
-                            EmptyView()
+            if hasSeenOnboarding {
+                NavigationStack(path: $router.navPath) {
+                    LessonsView(viewModel: LessonsViewModel())
+                        .navigationDestination(for: Router.Destination.self) { destination in
+                            switch destination {
+                            case .colorsLessonsView:
+                                ColorLessonView()
+                            case .fruitsLessonsView:
+                                FruitsLessonView()
+                            default:
+                                EmptyView()
+                            }
                         }
-                    }
+                }
+                .environmentObject(router)
+            } else {
+                OnboardingView()
             }
-            .environmentObject(router)
+                
         }
     }
 }
