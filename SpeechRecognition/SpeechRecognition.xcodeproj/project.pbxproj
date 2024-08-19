@@ -29,6 +29,7 @@
 		FA2245962C6CEFE1003081BB /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */; };
 		FA2245982C6CF8D7003081BB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245972C6CF8D7003081BB /* OnboardingView.swift */; };
 		FA785C5A2C7365C300B80D34 /* PronunciationPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C592C7365C300B80D34 /* PronunciationPopupView.swift */; };
+		FA785C5C2C7387E700B80D34 /* ButtonWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C5B2C7387E700B80D34 /* ButtonWaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		FA2245972C6CF8D7003081BB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FA785C592C7365C300B80D34 /* PronunciationPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationPopupView.swift; sourceTree = "<group>"; };
+		FA785C5B2C7387E700B80D34 /* ButtonWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				FA2245972C6CF8D7003081BB /* OnboardingView.swift */,
 				7AEB5E1D2C6CDA0B0020E588 /* CongratulationsView.swift */,
 				FA785C592C7365C300B80D34 /* PronunciationPopupView.swift */,
+				FA785C5B2C7387E700B80D34 /* ButtonWaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				AAFBC8422C6BDA2800D985AA /* FruitsLessonView.swift in Sources */,
 				7AD505022C66511B00743982 /* ReadData.swift in Sources */,
 				AAC94A4C2C63A9EA005BF94D /* SpeechRecognizer.swift in Sources */,
+				FA785C5C2C7387E700B80D34 /* ButtonWaveView.swift in Sources */,
 				7AD505042C66524D00743982 /* Lesson.swift in Sources */,
 				7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */,
 				AAFBC83C2C6659ED00D985AA /* LessonsView.swift in Sources */,
