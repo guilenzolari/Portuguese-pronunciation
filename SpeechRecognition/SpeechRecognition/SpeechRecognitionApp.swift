@@ -21,7 +21,7 @@ struct SpeechRecognitionApp: App {
                         .navigationDestination(for: Router.Destination.self) { destination in
                             switch destination {
                             case .colorsLessonsView:
-                                ColorLessonView()
+                                SentenceView()
                             case .fruitsLessonsView:
                                 FruitsLessonView()
                             default:
