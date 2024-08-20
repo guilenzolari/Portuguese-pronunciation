@@ -13,9 +13,10 @@ struct SentenceView: View {
     var sentence = "Coração"
     var pronunciation = "Como se pronuncia"
     var speechRecognizer = SpeechRecognizer(targetWord: "oi")
-    @State private var isRecording = false
+    @State var isRecording = false
     @StateObject var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
     @State var sentanceCount = 0
+    @State private var currentState: ViewState = .wrongAnswer
     
     var body: some View {
         NavigationView {
@@ -23,63 +24,15 @@ struct SentenceView: View {
                 
                 SegmentedProgressView(value: 0, maximum: 10)
                 
-                HStack{
-                    Text("Speak this sentence")
-                        .font(.title2)
-                        .bold()
-                        .padding()
-                    Spacer()
+                switch currentState {
+                case .start:
+                    StartAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer, isRecording: $isRecording)
+                case .rightAnswer:
+                    RightAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer, isRecording: isRecording)
+                case .wrongAnswer:
+                    WrongAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer)
                 }
-                
-                HStack {
-                    Image(systemName: "tree.fill")
-                        .font(.title)
-                    
-                    VStack {
-                        HStack {
-                            Button(action: {
-                                audioPlayer.playOrPause()
-                            }) {
-                                Image(systemName:"speaker.wave.3.fill")
-                                    .font(.title)
-                                    .foregroundStyle(.black)
-                            }
-                            
-                            Text("\"\(sentence)\"")
-                                .font(.title)
-                        }
-                        Text("/\(pronunciation)/")
-                    }
-                    Spacer()
-                }
-                
-                Spacer()
-                
-                Button(action: {
-                    if self.isRecording {
-                        self.speechRecognizer.stopSpeechRecording()
-                    } else {
-                        self.speechRecognizer.startSpeechRecording()
-                    }
-                    self.isRecording.toggle()
-                }) {
-                    Text(isRecording ? "Stop Recording" : "Start Recording")
-                        .padding()
-                        .background(isRecording ? Color.red : Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                
-                Button(action: {
-                    self.speechRecognizer.audioRecorder.playRecording()
-                }) {
-                    Text("Play Recording")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                
+ 
             }.navigationTitle(title)
                 .toolbarTitleDisplayMode(.inline)
                 .padding()
@@ -90,4 +43,10 @@ struct SentenceView: View {
 
 #Preview {
     SentenceView()
+}
+
+enum ViewState {
+    case start
+    case rightAnswer
+    case wrongAnswer
 }
