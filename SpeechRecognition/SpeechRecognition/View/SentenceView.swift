@@ -22,28 +22,34 @@ struct SentenceView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 SegmentedProgressView(value: 0, maximum: 10)
-                
+                    .padding(.top, -100)
+
                 switch currentState {
                 case .start:
-                    StartAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer, isRecording: $isRecording)
+                    StartAnswerView(audioPlayer: audioPlayer, 
+                                    sentence: sentence,
+                                    pronunciation: pronunciation,
+                                    speechRecognizer: speechRecognizer,
+                                    isRecording: $isRecording)
                 case .rightAnswer:
-                    RightAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer, isRecording: isRecording)
+                    RightAnswerView(audioPlayer: audioPlayer, 
+                                    sentence: sentence,
+                                    pronunciation: pronunciation,
+                                    speechRecognizer: speechRecognizer,
+                                    isRecording: isRecording)
                 case .wrongAnswer:
-                    WrongAnswerView(audioPlayer: audioPlayer, sentence: sentence, pronunciation: pronunciation, speechRecognizer: speechRecognizer)
+                    WrongAnswerView(audioPlayer: audioPlayer, 
+                                    sentence: sentence,
+                                    pronunciation: pronunciation,
+                                    speechRecognizer: speechRecognizer)
                 }
- 
-            }.navigationTitle(title)
-                .toolbarTitleDisplayMode(.inline)
-                .padding()
-        }
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text(title)
             }
+            .padding()
         }
-        .toolbarBackground(.white, for: .navigationBar)
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.visible, for: .navigationBar)
         .background(Color(UIColor.systemGroupedBackground))
     }
 }

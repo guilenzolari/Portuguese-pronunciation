@@ -45,6 +45,7 @@ struct StartAnswerView: View {
                     }
                     
                     Text("\"\(sentence)\"")
+                        .foregroundStyle(speechRecognizer.comparisonResult ? Color.green : Color.black)
                         .font(.title)
                 }
                 Text("/\(pronunciation)/")
@@ -55,13 +56,14 @@ struct StartAnswerView: View {
         
         //cant talk
         Button {
+            
         } label: {
             Text("I can't talk right now")
                 .frame(maxWidth: .infinity, maxHeight: 35)
+                .foregroundStyle(.white)
                 .bold()
         }
-        .buttonStyle(.borderedProminent)
-        
+
         Button {
             if self.isRecording {
                 self.speechRecognizer.stopSpeechRecording()
@@ -70,27 +72,12 @@ struct StartAnswerView: View {
             }
             self.isRecording.toggle()
         } label: {
-            if isRecording {
-                Text("Touch to speak")
-                    .buttonStyle(.borderedProminent)
-                    .frame(maxWidth: .infinity, maxHeight: 35)
-                    .bold()
-            } else {
-                HStack{
-                    Image(systemName: "waveform")
-                        .padding(.horizontal, -5)
-                    Image(systemName: "waveform")
-                        .padding(.horizontal, -5)
-                    Image(systemName: "waveform")
-                        .padding(.horizontal, -5)
-                    Image(systemName: "waveform")
-                        .padding(.horizontal, -5)
-                    Image(systemName: "waveform")
-                        .padding(.horizontal, -5)
-                } .frame(maxWidth: .infinity, maxHeight: 35)
-            }
-        }.buttonStyle(.borderedProminent)
-            .bold()
-
+            Text("Touch to speak")
+                .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity, maxHeight: 35)
+                .bold()
+        }
+        .buttonStyle(.borderedProminent)
+        .bold()
     }
 }
