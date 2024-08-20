@@ -31,7 +31,8 @@ struct SentenceView: View {
                                     sentence: sentence,
                                     pronunciation: pronunciation,
                                     speechRecognizer: speechRecognizer,
-                                    isRecording: $isRecording)
+                                    isRecording: $isRecording,
+                                    state: $currentState)
                 case .rightAnswer:
                     RightAnswerView(audioPlayer: audioPlayer, 
                                     sentence: sentence,

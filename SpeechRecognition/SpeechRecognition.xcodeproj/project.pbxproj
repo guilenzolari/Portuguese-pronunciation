@@ -434,7 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 45ZRHMBAB6;
+				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";
@@ -465,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SpeechRecognition/Preview Content\"";
-				DEVELOPMENT_TEAM = 45ZRHMBAB6;
+				DEVELOPMENT_TEAM = 8JTQ9M4J69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "O aplicativo precisa acessar o reconhecimento de fala para transcrever áudio em texto.";

@@ -13,13 +13,15 @@ struct StartAnswerView: View {
     var pronunciation: String
     var speechRecognizer: SpeechRecognizer
     @Binding var isRecording: Bool
+    @Binding var state: ViewState
     
-    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer, isRecording: Binding<Bool>) {
+    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer, isRecording: Binding<Bool>, state: Binding<ViewState>) {
         self.audioPlayer = audioPlayer
         self.sentence = sentence
         self.pronunciation = pronunciation
         self.speechRecognizer = speechRecognizer
         self._isRecording = isRecording
+        self._state = state
     }
     
     var body: some View {
@@ -45,7 +47,6 @@ struct StartAnswerView: View {
                     }
                     
                     Text("\"\(sentence)\"")
-                        .foregroundStyle(speechRecognizer.comparisonResult ? Color.green : Color.black)
                         .font(.title)
                 }
                 Text("/\(pronunciation)/")
@@ -65,12 +66,14 @@ struct StartAnswerView: View {
         }
 
         Button {
+            print("click")
             if self.isRecording {
                 self.speechRecognizer.stopSpeechRecording()
             } else {
                 self.speechRecognizer.startSpeechRecording()
             }
             self.isRecording.toggle()
+            self.state = speechRecognizer.comparisonResult
         } label: {
             Text("Touch to speak")
                 .buttonStyle(.borderedProminent)

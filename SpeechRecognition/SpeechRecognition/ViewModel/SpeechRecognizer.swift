@@ -18,7 +18,7 @@ final class SpeechRecognizer {
     private let audioEngine = AVAudioEngine()
     
     @MainActor var transcribedText = ""
-    var comparisonResult = false
+    var comparisonResult: ViewState = .start
     var comparisionWord: String
     
     let audioRecorder: AudioRecorder
@@ -109,7 +109,12 @@ final class SpeechRecognizer {
     }
     
     @MainActor func compareSpeechTranscription(with word: String) {
-        self.comparisonResult = transcribedText.lowercased().contains(word.lowercased())
-        print("Comparison Result: \(self.comparisonResult)")
+        if transcribedText.lowercased().contains(word.lowercased()) {
+            comparisonResult = .rightAnswer
+        } else {
+            comparisonResult = .wrongAnswer
+        }
+        
+        
     }
 }
