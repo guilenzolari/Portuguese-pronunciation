@@ -13,7 +13,8 @@ struct Lesson: Codable, Identifiable, Hashable {
                lhs.title == rhs.title &&
                lhs.description == rhs.description &&
                lhs.sentences == rhs.sentences &&
-               lhs.sfSymbol == rhs.sfSymbol
+               lhs.sfSymbol == rhs.sfSymbol &&
+               lhs.category == rhs.category
     }
     
     func hash(into hasher: inout Hasher) {
@@ -22,6 +23,7 @@ struct Lesson: Codable, Identifiable, Hashable {
         hasher.combine(description)
         hasher.combine(sentences)
         hasher.combine(sfSymbol)
+        hasher.combine(category)
     }
     
     enum CodingKeys: String, CodingKey {
@@ -29,6 +31,7 @@ struct Lesson: Codable, Identifiable, Hashable {
         case description
         case sentences
         case sfSymbol
+        case category
     }
     
     var id = UUID()
@@ -36,6 +39,7 @@ struct Lesson: Codable, Identifiable, Hashable {
     var description: String
     var sentences: [Sentence]
     var sfSymbol: String
+    var category: String
     
     struct Sentence: Codable, Hashable {
         var sentence: String

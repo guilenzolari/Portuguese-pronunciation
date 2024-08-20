@@ -14,6 +14,9 @@ class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var audioFormat: String
     
     @Published var isPlaying = false
+    @Published var waveValue: Double = 1.0
+    
+    private var timer: Timer?
     
     init(audio: String, audioFormat: String) {
         self.audio = audio
@@ -37,19 +40,34 @@ class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         if player.isPlaying {
             player.pause()
             isPlaying = false
+            stopUpdatingWaveValue()
         } else {
             player.play()
             isPlaying = true
+            startUpdatingWaveValue()
         }
+    }
+    
+    private func startUpdatingWaveValue() {
+        stopUpdatingWaveValue()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.0, repeats: true) { [weak self] _ in
+            guard let self = self, let player = self.audioPlayer else { return }
+            self.waveValue = player.currentTime / player.duration
+        }
+    }
+    
+    private func stopUpdatingWaveValue() {
+        timer?.invalidate()
+        timer = nil
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isPlaying = false
+        stopUpdatingWaveValue()
         if flag {
             print("Audio finished playing successfully.")
         } else {
             print("Audio playback finished due to an error.")
         }
     }
-    
 }

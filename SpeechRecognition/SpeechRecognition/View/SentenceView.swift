@@ -9,6 +9,7 @@ import SwiftUI
 import Speech
 
 struct SentenceView: View {
+    
     var title = "Colors"
     var sentence = "Coração"
     var pronunciation = "Como se pronuncia"
@@ -16,7 +17,7 @@ struct SentenceView: View {
     @State var isRecording = false
     @StateObject var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
     @State var sentanceCount = 0
-    @State private var currentState: ViewState = .wrongAnswer
+    @State private var currentState: ViewState = .start
     
     var body: some View {
         NavigationView {
@@ -37,7 +38,13 @@ struct SentenceView: View {
                 .toolbarTitleDisplayMode(.inline)
                 .padding()
         }
-        
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(title)
+            }
+        }
+        .toolbarBackground(.white, for: .navigationBar)
+        .background(Color(UIColor.systemGroupedBackground))
     }
 }
 

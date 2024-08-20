@@ -13,14 +13,15 @@ struct SwiftUIView: View {
         VStack{
             Spacer()
             
-            Image("Medal")
+            Image("Medalha")
+                .resizable()
+                .frame(width: 154, height: 188)
                 .padding()
             
             Text("Congratulations, you have completed your task! Keep practicing to improve you pronnunciation.")
                 .font(.title3)
                 .padding()
                 .multilineTextAlignment(.center)
-                .bold()
             
             Spacer()
             
