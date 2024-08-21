@@ -28,6 +28,7 @@
 		AAFBC8462C6CDAB100D985AA /* LessonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBC8452C6CDAB100D985AA /* LessonsViewModel.swift */; };
 		FA2245962C6CEFE1003081BB /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */; };
 		FA2245982C6CF8D7003081BB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2245972C6CF8D7003081BB /* OnboardingView.swift */; };
+		FA3848DB2C74DCB400EBFFB4 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FA3848DA2C74DCB400EBFFB4 /* Localizable.xcstrings */; };
 		FA785C5A2C7365C300B80D34 /* PronunciationPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C592C7365C300B80D34 /* PronunciationPopupView.swift */; };
 		FA785C5C2C7387E700B80D34 /* ButtonWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA785C5B2C7387E700B80D34 /* ButtonWaveView.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		AAFBC8452C6CDAB100D985AA /* LessonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewModel.swift; sourceTree = "<group>"; };
 		FA2245952C6CEFE1003081BB /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		FA2245972C6CF8D7003081BB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FA3848DA2C74DCB400EBFFB4 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FA785C592C7365C300B80D34 /* PronunciationPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationPopupView.swift; sourceTree = "<group>"; };
 		FA785C5B2C7387E700B80D34 /* ButtonWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			children = (
 				7AD504EF2C64F76000743982 /* Sounds */,
 				AAC94A412C63A973005BF94D /* Assets.xcassets */,
+				FA3848DA2C74DCB400EBFFB4 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = AAC94A312C63A971005BF94D;
 			productRefGroup = AAC94A3B2C63A971005BF94D /* Products */;
@@ -255,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD504FA2C650BA400743982 /* mao.m4a in Resources */,
+				FA3848DB2C74DCB400EBFFB4 /* Localizable.xcstrings in Resources */,
 				AAC94A452C63A973005BF94D /* Preview Assets.xcassets in Resources */,
 				AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */,
 				7AD505062C66530D00743982 /* lessons.json in Resources */,
@@ -300,6 +305,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -363,6 +369,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
