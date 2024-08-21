@@ -50,9 +50,9 @@ struct LessonsView: View {
             .listRowSeparator(.hidden)
             
             ForEach(viewModel.datas.lessons, id: \.self) { lesson in
-                LessonCard(lessonText: lesson.title,
+                LessonCard(lessonText: .init(lesson.title),
                            lessonIcon: lesson.sfSymbol,
-                           description: lesson.description,
+                           description: .init(lesson.description),
                            destination: viewModel.changeScreen(for: lesson.category))
             }
             .listRowBackground(Color.clear)
@@ -61,26 +61,26 @@ struct LessonsView: View {
         .navigationTitle("Lessons")
         .toolbar {
             ToolbarItem {
-                Menu {
-                    ForEach(languages, id: \.self) { language in
-                        Button(action: {
-                            selectedLanguage = language
-                        }) {
-                            HStack {
-                                Text(language)
-                                Spacer()
-                                if selectedLanguage == language {
-                                    Image(systemName: "checkmark")
-                                        .foregroundColor(.blue)
-                                }
-                            }
-                        }
-                    }
-                } label: {
-                    Image("translate")
-                        .font(.system(size: 14.0, weight: .medium))
-                }
-                .padding()
+//                Menu {
+//                    ForEach(languages, id: \.self) { language in
+//                        Button(action: {
+//                            selectedLanguage = language
+//                        }) {
+//                            HStack {
+//                                Text(language)
+//                                Spacer()
+//                                if selectedLanguage == language {
+//                                    Image(systemName: "checkmark")
+//                                        .foregroundColor(.blue)
+//                                }
+//                            }
+//                        }
+//                    }
+//                } label: {
+//                    Image("translate")
+//                        .font(.system(size: 14.0, weight: .medium))
+//                }
+//                .padding()
             }
         }
         .toolbarBackground(.white, for: .navigationBar)

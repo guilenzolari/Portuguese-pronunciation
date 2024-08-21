@@ -10,15 +10,15 @@ import SwiftUI
 struct LessonCard: View {
     
     var lessonIcon: String
-    var lessonText: String
-    var description: String
+    var lessonText: LocalizedStringKey
+    var description: LocalizedStringKey
     
     @EnvironmentObject var router: Router
     var destination: Router.Destination
     
-    init(lessonText: String,
+    init(lessonText: LocalizedStringKey,
          lessonIcon: String,
-         description: String,
+         description: LocalizedStringKey,
          destination: Router.Destination) {
         self.lessonText = lessonText
         self.lessonIcon = lessonIcon

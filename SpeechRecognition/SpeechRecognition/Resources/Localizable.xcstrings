@@ -1,0 +1,182 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "\"%@\"" : {
+
+    },
+    "/%@/" : {
+
+    },
+    "8" : {
+
+    },
+    "Achievements" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conquistas"
+          }
+        }
+      }
+    },
+    "COLOR" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cores"
+          }
+        }
+      }
+    },
+    "Colors" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cores"
+          }
+        }
+      }
+    },
+    "Congratulations, you have completed your task! Keep practicing to improve you pronnunciation." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parabéns, você concluiu sua tarefa! Continue praticando para melhorar sua pronúncia."
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        }
+      }
+    },
+    "Expand your color vocabulary." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expanda seu vocabulário de cores."
+          }
+        }
+      }
+    },
+    "Fruit" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frutas"
+          }
+        }
+      }
+    },
+    "Fruits" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frutas"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Learn to talk about fruits in various contexts and situations." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aprenda a falar sobre frutas em diversos contextos e situações."
+          }
+        }
+      }
+    },
+    "Lessons" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lições"
+          }
+        }
+      }
+    },
+    "Listen and repeat what Maya said. You will speak 10 times in this section." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouça e repita o que Maya disse. Você falará 10 vezes nesta seção."
+          }
+        }
+      }
+    },
+    "Pronunciation Skill" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habilidade de pronúncia"
+          }
+        }
+      }
+    },
+    "Speak this sentence" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fale esta frase"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Começar"
+          }
+        }
+      }
+    },
+    "Touch to speak" : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para falar"
+          }
+        }
+      }
+    },
+    "You trained 8 days in a row! Keep practising." : {
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você treinou 8 dias seguidos! Continue praticando."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
