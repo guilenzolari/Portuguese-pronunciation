@@ -11,7 +11,7 @@ import Speech
 struct SentenceView: View {
     
     var sentences: [Lesson.Sentence]
-    var title: String
+    var title: LocalizedStringKey
     @State var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State var isRecording = false
     @State var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
