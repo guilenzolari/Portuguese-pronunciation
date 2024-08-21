@@ -17,7 +17,7 @@ struct SpeechRecognitionApp: App {
         WindowGroup {
             if hasSeenOnboarding {
                 NavigationStack(path: $router.navPath) {
-                    SentenceView()
+                    LessonsView(viewModel: LessonsViewModel())
 //                    LessonsView(viewModel: LessonsViewModel())
 //                        .navigationDestination(for: Router.Destination.self) { destination in
 //                            switch destination {

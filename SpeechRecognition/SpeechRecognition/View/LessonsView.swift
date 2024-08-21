@@ -31,7 +31,7 @@ struct LessonsView: View {
                         }
                         Spacer()
                     }
-                    Text("You trained 8 days in a row! Keep practising.")
+                    Text("You trained 8 days in a row! Keep practicing.")
                         .font(.system(size: 14))
                         .foregroundColor(.primary)
                 }
@@ -53,7 +53,9 @@ struct LessonsView: View {
                 LessonCard(lessonText: lesson.title,
                            lessonIcon: lesson.sfSymbol,
                            description: lesson.description,
-                           destination: viewModel.changeScreen(for: lesson.category))
+                           destination: viewModel.changeScreen(for: lesson.category), 
+                           sentences: lesson.sentences
+                )
             }
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)

@@ -12,6 +12,7 @@ struct LessonCard: View {
     var lessonIcon: String
     var lessonText: String
     var description: String
+    var sentences: [Lesson.Sentence]
     
     @EnvironmentObject var router: Router
     var destination: Router.Destination
@@ -19,17 +20,20 @@ struct LessonCard: View {
     init(lessonText: String,
          lessonIcon: String,
          description: String,
-         destination: Router.Destination) {
+         destination: Router.Destination,
+         sentences: [Lesson.Sentence]
+    ) {
         self.lessonText = lessonText
         self.lessonIcon = lessonIcon
         self.description = description
         self.destination = destination
+        self.sentences = sentences
     }
     
     var body: some View {
-        Button(action: {
-            router.navigate(to: destination)
-        }, label: {
+        NavigationLink {
+            SentenceView(sentences: sentences, title: lessonText)
+        } label: {
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
@@ -57,6 +61,6 @@ struct LessonCard: View {
                     .foregroundStyle(Color.white)
                     .shadow(radius: 2, x: 0, y: 2)
             }
-        })
+        }
     }
 }

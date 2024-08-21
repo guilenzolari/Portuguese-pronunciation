@@ -13,8 +13,8 @@ class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
     var audio: String
     var audioFormat: String
     
-    @Published var isPlaying = false
-    @Published var waveValue: Double = 1.0
+    var isPlaying = false
+    var waveValue: Double = 1.0
     
     private var timer: Timer?
     

@@ -12,12 +12,14 @@ struct WrongAnswerView: View {
     var sentence: String
     var pronunciation: String
     var speechRecognizer: SpeechRecognizer
-    
-    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer) {
+    @Binding var state: ViewState
+
+    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer, state: Binding<ViewState>) {
         self.audioPlayer = audioPlayer
         self.sentence = sentence
         self.pronunciation = pronunciation
         self.speechRecognizer = speechRecognizer
+        self._state = state
     }
     
     var body: some View {
@@ -64,6 +66,8 @@ struct WrongAnswerView: View {
         
         //cant talk
         Button {
+            state = .start
+            speechRecognizer.comparisonResult = .start
         } label: {
             Text("Try Again")
                 .frame(maxWidth: .infinity, maxHeight: 35)

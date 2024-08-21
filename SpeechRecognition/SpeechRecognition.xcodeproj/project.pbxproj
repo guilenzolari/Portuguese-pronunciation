@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3ACC892C74E27D00717119 /* SentenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3ACC882C74E27D00717119 /* SentenceViewModel.swift */; };
+		7A9680492C760754000BAA4D /* azul.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680482C76063C000BAA4D /* azul.m4a */; };
+		7A96805A2C7607B2000BAA4D /* fraseUva.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804A2C7607B1000BAA4D /* fraseUva.m4a */; };
+		7A96805B2C7607B2000BAA4D /* banana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804B2C7607B1000BAA4D /* banana.m4a */; };
+		7A96805C2C7607B2000BAA4D /* uva.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804C2C7607B1000BAA4D /* uva.m4a */; };
+		7A96805D2C7607B2000BAA4D /* amarelo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804D2C7607B1000BAA4D /* amarelo.m4a */; };
+		7A96805E2C7607B2000BAA4D /* fraseMelancia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804E2C7607B1000BAA4D /* fraseMelancia.m4a */; };
+		7A96805F2C7607B2000BAA4D /* fraseVerde.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A96804F2C7607B1000BAA4D /* fraseVerde.m4a */; };
+		7A9680602C7607B2000BAA4D /* azul.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680502C7607B1000BAA4D /* azul.m4a */; };
+		7A9680612C7607B2000BAA4D /* melancia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680512C7607B1000BAA4D /* melancia.m4a */; };
+		7A9680622C7607B2000BAA4D /* verde.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680522C7607B1000BAA4D /* verde.m4a */; };
+		7A9680632C7607B2000BAA4D /* vermelho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680532C7607B1000BAA4D /* vermelho.m4a */; };
+		7A9680642C7607B2000BAA4D /* fraseAzul.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680542C7607B1000BAA4D /* fraseAzul.m4a */; };
+		7A9680652C7607B2000BAA4D /* fraseVermelho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680552C7607B1000BAA4D /* fraseVermelho.m4a */; };
+		7A9680662C7607B2000BAA4D /* fraseAmarelo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680562C7607B2000BAA4D /* fraseAmarelo.m4a */; };
+		7A9680672C7607B2000BAA4D /* fraseLaranja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680572C7607B2000BAA4D /* fraseLaranja.m4a */; };
+		7A9680682C7607B2000BAA4D /* fraseBanana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680582C7607B2000BAA4D /* fraseBanana.m4a */; };
+		7A9680692C7607B2000BAA4D /* laranja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7A9680592C7607B2000BAA4D /* laranja.m4a */; };
 		7AD504ED2C64F67800743982 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */; };
 		7AD504FA2C650BA400743982 /* mao.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7AD504F92C650BA400743982 /* mao.m4a */; };
 		7AD505022C66511B00743982 /* ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD505012C66511B00743982 /* ReadData.swift */; };
@@ -36,27 +54,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3ACC882C74E27D00717119 /* SentenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceViewModel.swift; sourceTree = "<group>"; };
+		7A9680482C76063C000BAA4D /* azul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = azul.m4a; path = ../../../../../../Desktop/azul.m4a; sourceTree = "<group>"; };
+		7A96804A2C7607B1000BAA4D /* fraseUva.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseUva.m4a; path = ../../../../../../Desktop/fraseUva.m4a; sourceTree = "<group>"; };
+		7A96804B2C7607B1000BAA4D /* banana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = banana.m4a; path = ../../../../../../Desktop/banana.m4a; sourceTree = "<group>"; };
+		7A96804C2C7607B1000BAA4D /* uva.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = uva.m4a; path = ../../../../../../Desktop/uva.m4a; sourceTree = "<group>"; };
+		7A96804D2C7607B1000BAA4D /* amarelo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = amarelo.m4a; path = ../../../../../../Desktop/amarelo.m4a; sourceTree = "<group>"; };
+		7A96804E2C7607B1000BAA4D /* fraseMelancia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseMelancia.m4a; path = ../../../../../../Desktop/fraseMelancia.m4a; sourceTree = "<group>"; };
+		7A96804F2C7607B1000BAA4D /* fraseVerde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseVerde.m4a; path = ../../../../../../Desktop/fraseVerde.m4a; sourceTree = "<group>"; };
+		7A9680502C7607B1000BAA4D /* azul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = azul.m4a; path = ../../../../../../Desktop/azul.m4a; sourceTree = "<group>"; };
+		7A9680512C7607B1000BAA4D /* melancia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = melancia.m4a; path = ../../../../../../Desktop/melancia.m4a; sourceTree = "<group>"; };
+		7A9680522C7607B1000BAA4D /* verde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = verde.m4a; path = ../../../../../../Desktop/verde.m4a; sourceTree = "<group>"; };
+		7A9680532C7607B1000BAA4D /* vermelho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = vermelho.m4a; path = ../../../../../../Desktop/vermelho.m4a; sourceTree = "<group>"; };
+		7A9680542C7607B1000BAA4D /* fraseAzul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseAzul.m4a; path = ../../../../../../Desktop/fraseAzul.m4a; sourceTree = "<group>"; };
+		7A9680552C7607B1000BAA4D /* fraseVermelho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseVermelho.m4a; path = ../../../../../../Desktop/fraseVermelho.m4a; sourceTree = "<group>"; };
+		7A9680562C7607B2000BAA4D /* fraseAmarelo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseAmarelo.m4a; path = ../../../../../../Desktop/fraseAmarelo.m4a; sourceTree = "<group>"; };
+		7A9680572C7607B2000BAA4D /* fraseLaranja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseLaranja.m4a; path = ../../../../../../Desktop/fraseLaranja.m4a; sourceTree = "<group>"; };
+		7A9680582C7607B2000BAA4D /* fraseBanana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = fraseBanana.m4a; path = ../../../../../../Desktop/fraseBanana.m4a; sourceTree = "<group>"; };
+		7A9680592C7607B2000BAA4D /* laranja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = laranja.m4a; path = ../../../../../../Desktop/laranja.m4a; sourceTree = "<group>"; };
 		7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 		7AD504F92C650BA400743982 /* mao.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mao.m4a; sourceTree = "<group>"; };
 		7AD505012C66511B00743982 /* ReadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadData.swift; sourceTree = "<group>"; };
 		7AD505032C66524D00743982 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		7AD505052C66530D00743982 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
-		7AEB5E0B2C6CD1940020E588 /* fraseUva.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseUva.m4a; sourceTree = "<group>"; };
-		7AEB5E0C2C6CD1940020E588 /* fraseVermelho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseVermelho.m4a; sourceTree = "<group>"; };
-		7AEB5E0D2C6CD1940020E588 /* fraseAmarelo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseAmarelo.m4a; sourceTree = "<group>"; };
-		7AEB5E0E2C6CD1940020E588 /* verde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = verde.m4a; sourceTree = "<group>"; };
-		7AEB5E0F2C6CD1940020E588 /* azul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = azul.m4a; sourceTree = "<group>"; };
-		7AEB5E102C6CD1940020E588 /* fraseVerde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseVerde.m4a; sourceTree = "<group>"; };
-		7AEB5E112C6CD1940020E588 /* fraseMelancia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseMelancia.m4a; sourceTree = "<group>"; };
-		7AEB5E122C6CD1940020E588 /* melancia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = melancia.m4a; sourceTree = "<group>"; };
-		7AEB5E132C6CD1950020E588 /* laranja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = laranja.m4a; sourceTree = "<group>"; };
-		7AEB5E142C6CD1950020E588 /* vermelho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = vermelho.m4a; sourceTree = "<group>"; };
-		7AEB5E152C6CD1950020E588 /* fraseAzul.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseAzul.m4a; sourceTree = "<group>"; };
-		7AEB5E162C6CD1950020E588 /* fraseLaranja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseLaranja.m4a; sourceTree = "<group>"; };
-		7AEB5E172C6CD1950020E588 /* amarelo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = amarelo.m4a; sourceTree = "<group>"; };
-		7AEB5E182C6CD1950020E588 /* banana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = banana.m4a; sourceTree = "<group>"; };
-		7AEB5E192C6CD1950020E588 /* uva.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = uva.m4a; sourceTree = "<group>"; };
-		7AEB5E1A2C6CD1950020E588 /* fraseBanana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fraseBanana.m4a; sourceTree = "<group>"; };
 		7AEB5E1B2C6CD3CF0020E588 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		7AEB5E1D2C6CDA0B0020E588 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		7AEB5E1F2C6CFCF30020E588 /* RightAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnswerView.swift; sourceTree = "<group>"; };
@@ -104,22 +124,23 @@
 		7AD504EF2C64F76000743982 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7AEB5E172C6CD1950020E588 /* amarelo.m4a */,
-				7AEB5E0F2C6CD1940020E588 /* azul.m4a */,
-				7AEB5E182C6CD1950020E588 /* banana.m4a */,
-				7AEB5E0D2C6CD1940020E588 /* fraseAmarelo.m4a */,
-				7AEB5E152C6CD1950020E588 /* fraseAzul.m4a */,
-				7AEB5E1A2C6CD1950020E588 /* fraseBanana.m4a */,
-				7AEB5E162C6CD1950020E588 /* fraseLaranja.m4a */,
-				7AEB5E112C6CD1940020E588 /* fraseMelancia.m4a */,
-				7AEB5E0B2C6CD1940020E588 /* fraseUva.m4a */,
-				7AEB5E102C6CD1940020E588 /* fraseVerde.m4a */,
-				7AEB5E0C2C6CD1940020E588 /* fraseVermelho.m4a */,
-				7AEB5E132C6CD1950020E588 /* laranja.m4a */,
-				7AEB5E122C6CD1940020E588 /* melancia.m4a */,
-				7AEB5E192C6CD1950020E588 /* uva.m4a */,
-				7AEB5E0E2C6CD1940020E588 /* verde.m4a */,
-				7AEB5E142C6CD1950020E588 /* vermelho.m4a */,
+				7A9680482C76063C000BAA4D /* azul.m4a */,
+				7A96804D2C7607B1000BAA4D /* amarelo.m4a */,
+				7A9680502C7607B1000BAA4D /* azul.m4a */,
+				7A96804B2C7607B1000BAA4D /* banana.m4a */,
+				7A9680562C7607B2000BAA4D /* fraseAmarelo.m4a */,
+				7A9680542C7607B1000BAA4D /* fraseAzul.m4a */,
+				7A9680582C7607B2000BAA4D /* fraseBanana.m4a */,
+				7A9680572C7607B2000BAA4D /* fraseLaranja.m4a */,
+				7A96804E2C7607B1000BAA4D /* fraseMelancia.m4a */,
+				7A96804A2C7607B1000BAA4D /* fraseUva.m4a */,
+				7A96804F2C7607B1000BAA4D /* fraseVerde.m4a */,
+				7A9680552C7607B1000BAA4D /* fraseVermelho.m4a */,
+				7A9680592C7607B2000BAA4D /* laranja.m4a */,
+				7A9680512C7607B1000BAA4D /* melancia.m4a */,
+				7A96804C2C7607B1000BAA4D /* uva.m4a */,
+				7A9680522C7607B1000BAA4D /* verde.m4a */,
+				7A9680532C7607B1000BAA4D /* vermelho.m4a */,
 				7AD504F92C650BA400743982 /* mao.m4a */,
 			);
 			path = Sounds;
@@ -129,10 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				AAFBC83B2C6659ED00D985AA /* LessonsView.swift */,
+				AAC94A3F2C63A971005BF94D /* SentenceView.swift */,
+				AAFBC8392C6650C600D985AA /* LessonCard.swift */,
 				AAFBC8412C6BDA2800D985AA /* FruitsLessonView.swift */,
 				AAFBC8432C6CD74200D985AA /* ColorLessonView.swift */,
-				AAFBC8392C6650C600D985AA /* LessonCard.swift */,
-				AAC94A3F2C63A971005BF94D /* SentenceView.swift */,
 				7AEB5E1F2C6CFCF30020E588 /* RightAnswerView.swift */,
 				7AEB5E232C6CFD210020E588 /* StartAnswerView.swift */,
 				7AEB5E252C6CFD2C0020E588 /* WrongAnswerView.swift */,
@@ -163,6 +184,7 @@
 				AAC94A4B2C63A9EA005BF94D /* SpeechRecognizer.swift */,
 				7AD504EC2C64F67800743982 /* AudioPlayerViewModel.swift */,
 				AAFBC8452C6CDAB100D985AA /* LessonsViewModel.swift */,
+				7A3ACC882C74E27D00717119 /* SentenceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,8 +285,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9680662C7607B2000BAA4D /* fraseAmarelo.m4a in Resources */,
+				7A9680682C7607B2000BAA4D /* fraseBanana.m4a in Resources */,
+				7A9680692C7607B2000BAA4D /* laranja.m4a in Resources */,
+				7A96805E2C7607B2000BAA4D /* fraseMelancia.m4a in Resources */,
+				7A9680492C760754000BAA4D /* azul.m4a in Resources */,
 				7AD504FA2C650BA400743982 /* mao.m4a in Resources */,
+				7A9680672C7607B2000BAA4D /* fraseLaranja.m4a in Resources */,
 				AAC94A452C63A973005BF94D /* Preview Assets.xcassets in Resources */,
+				7A9680602C7607B2000BAA4D /* azul.m4a in Resources */,
+				7A9680612C7607B2000BAA4D /* melancia.m4a in Resources */,
+				7A96805F2C7607B2000BAA4D /* fraseVerde.m4a in Resources */,
+				7A9680632C7607B2000BAA4D /* vermelho.m4a in Resources */,
+				7A96805C2C7607B2000BAA4D /* uva.m4a in Resources */,
+				7A96805A2C7607B2000BAA4D /* fraseUva.m4a in Resources */,
+				7A9680642C7607B2000BAA4D /* fraseAzul.m4a in Resources */,
+				7A96805B2C7607B2000BAA4D /* banana.m4a in Resources */,
+				7A9680652C7607B2000BAA4D /* fraseVermelho.m4a in Resources */,
+				7A96805D2C7607B2000BAA4D /* amarelo.m4a in Resources */,
+				7A9680622C7607B2000BAA4D /* verde.m4a in Resources */,
 				AAC94A422C63A973005BF94D /* Assets.xcassets in Resources */,
 				7AD505062C66530D00743982 /* lessons.json in Resources */,
 			);
@@ -299,6 +338,7 @@
 				7AEB5E1C2C6CD3CF0020E588 /* ProgressBar.swift in Sources */,
 				7AEB5E242C6CFD210020E588 /* StartAnswerView.swift in Sources */,
 				AAFBC83A2C6650C600D985AA /* LessonCard.swift in Sources */,
+				7A3ACC892C74E27D00717119 /* SentenceViewModel.swift in Sources */,
 				FA2245962C6CEFE1003081BB /* OnboardingCardView.swift in Sources */,
 				FA785C5A2C7365C300B80D34 /* PronunciationPopupView.swift in Sources */,
 			);

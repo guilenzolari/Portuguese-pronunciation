@@ -13,13 +13,17 @@ struct RightAnswerView: View {
     var pronunciation: String
     var speechRecognizer: SpeechRecognizer
     var isRecording: Bool
+    @Binding var state: ViewState
+    @Binding var sentanceCount: Int
     
-    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer, isRecording: Bool) {
+    init(audioPlayer: AudioPlayerViewModel, sentence: String, pronunciation: String, speechRecognizer: SpeechRecognizer, isRecording: Bool, sentanceCount: Binding<Int>, state: Binding<ViewState>) {
         self.audioPlayer = audioPlayer
         self.sentence = sentence
         self.pronunciation = pronunciation
         self.speechRecognizer = speechRecognizer
         self.isRecording = isRecording
+        self._sentanceCount = sentanceCount
+        self._state = state
     }
     
     var body: some View {
@@ -66,6 +70,9 @@ struct RightAnswerView: View {
         
         //cant talk
         Button {
+            sentanceCount += 1
+            state = .start
+            
         } label: {
             Text("Continue")
                 .frame(maxWidth: .infinity, maxHeight: 35)

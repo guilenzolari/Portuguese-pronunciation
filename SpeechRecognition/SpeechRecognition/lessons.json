@@ -12,7 +12,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "O sol estava brilhando em um tom intenso de amarelo.",
+                "sentence": "O sol estava brilhando em um tom intenso de amarelo",
                 "phonetic": "o sɔw isˈtavɐ bɾiˈʎɐ̃du ẽ ũ tõ ĩˈtẽsu dʒi amaˈʁɛlu",
                 "audioFileName": "fraseAmarelo",
                 "audioFormat": "m4a"
@@ -24,7 +24,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "O céu azul sem nuvens era um lindo cenário para a tarde.",
+                "sentence": "O céu azul sem nuvens era um lindo cenário para a tarde",
                 "phonetic": "u sɛw aˈzul sɛ̃ ˈnuvẽs ˈɛɾɐ ũ ˈlĩdu seˈnaɾju ˈpaɾɐ a ˈtaʁdʒi",
                 "audioFileName": "fraseAzul",
                 "audioFormat": "m4a"
@@ -36,7 +36,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "As folhas verdes das árvores balançavam com o vento.",
+                "sentence": "As folhas verdes das árvores balançavam com o vento",
                 "phonetic": "az ˈfoʎɐs ˈveʁdʒis dɐs ˈaʁvoɾis bɐˈlɐ̃sɐvɐ̃ kõ u ˈvẽtu",
                 "audioFileName": "fraseVerde",
                 "audioFormat": "m4a"
@@ -48,7 +48,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "Ela escolheu um vestido vermelho para a festa.",
+                "sentence": "Ela escolheu um vestido vermelho para a festa",
                 "phonetic": "ˈɛlɐ iskoˈʎew ũ veˈʃtʃidu veʁˈmeʎu ˈpaɾɐ a ˈfɛstɐ",
                 "audioFileName": "fraseVermelho",
                 "audioFormat": "m4a"
@@ -57,7 +57,7 @@
     },
     {
         "title": "Fruits",
-        "description": "Learn to talk about fruits in various contexts and situations.",
+        "description": "Learn to talk about fruits in various contexts and situations",
         "category": "Fruits",
         "sfSymbol": "tree.fill",
         "sentences": [
@@ -68,7 +68,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "A banana é uma das frutas mais consumidas no mundo.",
+                "sentence": "A banana é uma das frutas mais consumidas no mundo",
                 "phonetic": "a baˈnɐnɐ ɛ ˈumɐ dʒiˈzɐ ˈfɾutɐs mãjs kõsuˈmidɐs nu ˈmũdu",
                 "audioFileName": "fraseBanana",
                 "audioFormat": "m4a"
@@ -80,7 +80,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "Comprei uma melancia bem fresca para a sobremesa.",
+                "sentence": "Comprei uma melancia bem fresca para a sobremesa",
                 "phonetic": "kõˈpɾej ˈumɐ meɫɐnˈsia bẽj ˈfɾɛskɐ ˈpaɾɐ a sobɾeˈmezɐ",
                 "audioFileName": "fraseMelancia",
                 "audioFormat": "m4a"
@@ -92,7 +92,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "As uvas verdes são minhas favoritas por serem mais azedinhas.",
+                "sentence": "As uvas verdes são minhas favoritas por serem mais azedinhas",
                 "phonetic": "az ˈuvɐs ˈveʁdʒis sãw ˈmiɲɐs favɔˈɾitɐs poʁ ˈseɾẽj majs azediˈɲɐs",
                 "audioFileName": "fraseUva",
                 "audioFormat": "m4a"
@@ -104,7 +104,7 @@
                 "audioFormat": "m4a"
             },
             {
-                "sentence": "Prefiro tomar suco de laranja no café da manhã.",
+                "sentence": "Prefiro tomar suco de laranja no café da manhã",
                 "phonetic": "pɾeˈfiɾu toˈmaʁ ˈsuku dʒi laˈɾɐ̃ʒɐ nu kaˈfɛ dɐ mɐˈɲɐ",
                 "audioFileName": "fraseLaranja",
                 "audioFormat": "m4a"

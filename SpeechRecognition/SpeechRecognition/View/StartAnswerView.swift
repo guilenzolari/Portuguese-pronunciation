@@ -50,6 +50,9 @@ struct StartAnswerView: View {
                         .font(.title)
                 }
                 Text("/\(pronunciation)/")
+                
+                Text(speechRecognizer.transcribedText)
+
             }
             Spacer()
         }
@@ -74,11 +77,20 @@ struct StartAnswerView: View {
             }
             self.isRecording.toggle()
             self.state = speechRecognizer.comparisonResult
+            print(speechRecognizer.transcribedText)
         } label: {
-            Text("Touch to speak")
-                .buttonStyle(.borderedProminent)
-                .frame(maxWidth: .infinity, maxHeight: 35)
-                .bold()
+            if !isRecording {
+                Text("Touch to speak")
+                    .buttonStyle(.borderedProminent)
+                    .frame(maxWidth: .infinity, maxHeight: 35)
+                    .bold()
+            } else {
+                Text("Gravando")
+                    .buttonStyle(.borderedProminent)
+                    .foregroundStyle(.red)
+                    .frame(maxWidth: .infinity, maxHeight: 35)
+                    .bold()
+            }
         }
         .buttonStyle(.borderedProminent)
         .bold()

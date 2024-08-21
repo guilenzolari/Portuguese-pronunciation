@@ -10,40 +10,41 @@ import Speech
 
 struct SentenceView: View {
     
-    var title = "Colors"
-    var sentence = "Coração"
-    var pronunciation = "Como se pronuncia"
-    var speechRecognizer = SpeechRecognizer(targetWord: "oi")
+    var sentences: [Lesson.Sentence]
+    var title: String
+    @State var speechRecognizer = SpeechRecognizer(targetWord: "oi")
     @State var isRecording = false
-    @StateObject var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
+    @State var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
     @State var sentanceCount = 0
-    @State private var currentState: ViewState = .start
+    @State var currentState: ViewState = .start
     
     var body: some View {
         NavigationView {
             VStack {
-                SegmentedProgressView(value: 0, maximum: 10)
-                    .padding(.top, -100)
+                SegmentedProgressView(value: sentanceCount+1, maximum: sentences.count)
 
                 switch currentState {
                 case .start:
-                    StartAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
+                    StartAnswerView(audioPlayer: audioPlayer,
+                                    sentence: sentences[sentanceCount].sentence,
+                                    pronunciation: sentences[sentanceCount].phonetic,
                                     speechRecognizer: speechRecognizer,
                                     isRecording: $isRecording,
                                     state: $currentState)
                 case .rightAnswer:
                     RightAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
+                                    sentence: sentences[sentanceCount].sentence,
+                                    pronunciation: sentences[sentanceCount].phonetic,
                                     speechRecognizer: speechRecognizer,
-                                    isRecording: isRecording)
+                                    isRecording: isRecording, 
+                                    sentanceCount: $sentanceCount, 
+                                    state: $currentState)
                 case .wrongAnswer:
                     WrongAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
-                                    speechRecognizer: speechRecognizer)
+                                    sentence: sentences[sentanceCount].sentence,
+                                    pronunciation: sentences[sentanceCount].phonetic,
+                                    speechRecognizer: speechRecognizer,
+                                    state: $currentState)
                 }
             }
             .padding()
@@ -52,11 +53,17 @@ struct SentenceView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.visible, for: .navigationBar)
         .background(Color(UIColor.systemGroupedBackground))
-    }
-}
+        .onAppear {
+            self.audioPlayer = AudioPlayerViewModel(audio: sentences[sentanceCount].audioFileName, audioFormat: "m4a")
+            speechRecognizer = SpeechRecognizer(targetWord: sentences[sentanceCount].sentence)
 
-#Preview {
-    SentenceView()
+
+        }.onChange(of: sentanceCount) { oldValue, newValue in
+            self.audioPlayer = AudioPlayerViewModel(audio: sentences[sentanceCount].audioFileName, audioFormat: "m4a")
+            speechRecognizer = SpeechRecognizer(targetWord: sentences[sentanceCount].sentence)
+            print(sentences[sentanceCount].sentence)
+        }
+    }
 }
 
 enum ViewState {
