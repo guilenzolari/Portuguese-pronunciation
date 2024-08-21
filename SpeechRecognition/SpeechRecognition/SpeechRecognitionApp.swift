@@ -17,18 +17,18 @@ struct SpeechRecognitionApp: App {
         WindowGroup {
             if hasSeenOnboarding {
                 NavigationStack(path: $router.navPath) {
-                    SentenceView()
-//                    LessonsView(viewModel: LessonsViewModel())
-//                        .navigationDestination(for: Router.Destination.self) { destination in
-//                            switch destination {
-//                            case .colorsLessonsView:
-//                                SentenceView()
-//                            case .fruitsLessonsView:
-//                                FruitsLessonView()
-//                            default:
-//                                EmptyView()
-//                            }
-//                        }
+//                    SentenceView()
+                    LessonsView(viewModel: LessonsViewModel())
+                        .navigationDestination(for: Router.Destination.self) { destination in
+                            switch destination {
+                            case .colorsLessonsView:
+                                SentenceView()
+                            case .fruitsLessonsView:
+                                FruitsLessonView()
+                            default:
+                                EmptyView()
+                            }
+                        }
                 }
                 .environmentObject(router)
             } else {

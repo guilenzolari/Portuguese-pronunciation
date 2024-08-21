@@ -20,33 +20,30 @@ struct SentenceView: View {
     @State private var currentState: ViewState = .start
     
     var body: some View {
-        NavigationView {
-            VStack {
-                SegmentedProgressView(value: 0, maximum: 10)
-                    .padding(.top, -100)
-
-                switch currentState {
-                case .start:
-                    StartAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
-                                    speechRecognizer: speechRecognizer,
-                                    isRecording: $isRecording)
-                case .rightAnswer:
-                    RightAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
-                                    speechRecognizer: speechRecognizer,
-                                    isRecording: isRecording)
-                case .wrongAnswer:
-                    WrongAnswerView(audioPlayer: audioPlayer, 
-                                    sentence: sentence,
-                                    pronunciation: pronunciation,
-                                    speechRecognizer: speechRecognizer)
-                }
+        VStack {
+            SegmentedProgressView(value: 0, maximum: 10)
+            
+            switch currentState {
+            case .start:
+                StartAnswerView(audioPlayer: audioPlayer,
+                                sentence: sentence,
+                                pronunciation: pronunciation,
+                                speechRecognizer: speechRecognizer,
+                                isRecording: $isRecording)
+            case .rightAnswer:
+                RightAnswerView(audioPlayer: audioPlayer,
+                                sentence: sentence,
+                                pronunciation: pronunciation,
+                                speechRecognizer: speechRecognizer,
+                                isRecording: isRecording)
+            case .wrongAnswer:
+                WrongAnswerView(audioPlayer: audioPlayer,
+                                sentence: sentence,
+                                pronunciation: pronunciation,
+                                speechRecognizer: speechRecognizer)
             }
-            .padding()
         }
+        .padding()
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.visible, for: .navigationBar)

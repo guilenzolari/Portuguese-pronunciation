@@ -17,19 +17,20 @@ final class SpeechRecognizer {
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    
     @MainActor var transcribedText = ""
-    var comparisonResult = false
+    var comparisonResult: ViewState = .start
     var comparisionWord: String
     
     let audioRecorder: AudioRecorder
-
+    
     init(targetWord: String) {
         self.speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "pt-BR"))
         self.comparisionWord = targetWord
         self.audioRecorder = AudioRecorder()
         requestAuthorization()
     }
-
+    
     func requestAuthorization() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
@@ -48,17 +49,17 @@ final class SpeechRecognizer {
             }
         }
     }
-
+    
     func startSpeechRecording() {
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-
+        
         let inputNode = audioEngine.inputNode
         guard let recognitionRequest = recognitionRequest else {
             fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
         }
-
+        
         recognitionRequest.shouldReportPartialResults = true
-
+        
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest) { result, error in
             if let result = result {
                 DispatchQueue.main.async {
@@ -66,13 +67,13 @@ final class SpeechRecognizer {
                     self.compareSpeechTranscription(with: self.comparisionWord)
                 }
             }
-
+            
             if let error = error {
                 print("Recognition error: \(error.localizedDescription)")
                 self.stopSpeechRecording()
             }
         }
-
+        
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
         do {
@@ -80,7 +81,7 @@ final class SpeechRecognizer {
         } catch {
             print("Failed to create AVAudioFile: \(error.localizedDescription)")
         }
-
+        
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, when in
             self.recognitionRequest?.append(buffer)
             do {
@@ -89,27 +90,30 @@ final class SpeechRecognizer {
                 print("Failed to write audio buffer: \(error.localizedDescription)")
             }
         }
-
+        
         audioEngine.prepare()
-
+        
         do {
             try audioEngine.start()
         } catch {
             print("audioEngine couldn't start because of an error: \(error.localizedDescription)")
         }
     }
-
+    
     func stopSpeechRecording() {
         audioEngine.stop()
         recognitionRequest?.endAudio()
         recognitionTask?.cancel()
-
+        
         let inputNode = audioEngine.inputNode
         inputNode.removeTap(onBus: 0)
     }
     
     @MainActor func compareSpeechTranscription(with word: String) {
-        self.comparisonResult = transcribedText.lowercased().contains(word.lowercased())
-        print("Comparison Result: \(self.comparisonResult)")
+        if transcribedText.lowercased().contains(word.lowercased()) {
+            comparisonResult = .rightAnswer
+        } else {
+            comparisonResult = .wrongAnswer
+        }
     }
 }
