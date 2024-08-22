@@ -26,6 +26,7 @@ struct SwiftUIView: View {
             Spacer()
             
             Button {
+                
             } label: {
                 Text("Continue")
                     .frame(maxWidth: .infinity)

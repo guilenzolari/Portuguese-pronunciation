@@ -70,9 +70,12 @@ struct RightAnswerView: View {
         
         //cant talk
         Button {
-            sentanceCount += 1
-            state = .start
-            
+            if sentanceCount == 8 {
+                sentanceCount += 1
+                state = .start
+            } else {
+                state = .congrats
+            }
         } label: {
             Text("Continue")
                 .frame(maxWidth: .infinity, maxHeight: 35)

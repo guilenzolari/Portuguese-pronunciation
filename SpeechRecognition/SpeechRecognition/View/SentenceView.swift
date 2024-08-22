@@ -12,10 +12,10 @@ struct SentenceView: View {
     
     var sentences: [Lesson.Sentence]
     var title: LocalizedStringKey
-    @State var speechRecognizer = SpeechRecognizer(targetWord: "oi")
+    @State var speechRecognizer = SpeechRecognizer(targetWord: "")
     @State var isRecording = false
     @State var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
-    @State var sentanceCount = 0
+    @State var sentanceCount = 7
     @State var currentState: ViewState = .start
     
     var body: some View {
@@ -45,6 +45,8 @@ struct SentenceView: View {
                                     pronunciation: sentences[sentanceCount].phonetic,
                                     speechRecognizer: speechRecognizer,
                                     state: $currentState)
+                case .congrats:
+                    SwiftUIView()
                 }
             }
             .padding()
@@ -56,9 +58,8 @@ struct SentenceView: View {
         .onAppear {
             self.audioPlayer = AudioPlayerViewModel(audio: sentences[sentanceCount].audioFileName, audioFormat: "m4a")
             speechRecognizer = SpeechRecognizer(targetWord: sentences[sentanceCount].sentence)
-
-
-        }.onChange(of: sentanceCount) { oldValue, newValue in
+        }
+        .onChange(of: sentanceCount) { oldValue, newValue in
             self.audioPlayer = AudioPlayerViewModel(audio: sentences[sentanceCount].audioFileName, audioFormat: "m4a")
             speechRecognizer = SpeechRecognizer(targetWord: sentences[sentanceCount].sentence)
             print(sentences[sentanceCount].sentence)
@@ -70,4 +71,5 @@ enum ViewState {
     case start
     case rightAnswer
     case wrongAnswer
+    case congrats
 }

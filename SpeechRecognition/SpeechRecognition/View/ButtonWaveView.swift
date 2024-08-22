@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ButtonWaveView: View {
-    @State private var isFavorite = false
+    @Binding var isRecording: Bool
+    @Binding var state: ViewState
+    var speechRecognizer: SpeechRecognizer
 
     var body: some View {
         Button(action: {
-            isFavorite.toggle()
+            isRecording = false
+            self.speechRecognizer.stopSpeechRecording()
+            self.state = speechRecognizer.comparisonResult
         }) {
             HStack(spacing: -0.5) {
                 ForEach(0..<6, id: \.self) { _ in
                     Image(systemName: "waveform")
                         .font(.system(size: 28))
-                        .symbolEffect(.bounce, options: .speed(0.1).repeat(4), value: isFavorite)
+                        .symbolEffect(.bounce, options: .speed(0.1).repeat(.max), value: isRecording)
                 }
             }
         }
@@ -27,8 +31,4 @@ struct ButtonWaveView: View {
         .foregroundColor(.white)
         .cornerRadius(8)
     }
-}
-
-#Preview {
-    ButtonWaveView()
 }

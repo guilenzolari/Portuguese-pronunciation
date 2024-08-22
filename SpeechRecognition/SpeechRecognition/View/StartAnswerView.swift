@@ -52,7 +52,7 @@ struct StartAnswerView: View {
                 Text("/\(pronunciation)/")
                 
                 Text(speechRecognizer.transcribedText)
-
+                
             }
             Spacer()
         }
@@ -67,32 +67,20 @@ struct StartAnswerView: View {
                 .foregroundStyle(.white)
                 .bold()
         }
-
-        Button {
-            print("click")
-            if self.isRecording {
-                self.speechRecognizer.stopSpeechRecording()
-            } else {
+        
+        if !isRecording {
+            Button {
                 self.speechRecognizer.startSpeechRecording()
-            }
-            self.isRecording.toggle()
-            self.state = speechRecognizer.comparisonResult
-            print(speechRecognizer.transcribedText)
-        } label: {
-            if !isRecording {
+                self.isRecording = true
+                self.state = speechRecognizer.comparisonResult
+            } label: {
                 Text("Touch to speak")
-                    .buttonStyle(.borderedProminent)
-                    .frame(maxWidth: .infinity, maxHeight: 35)
-                    .bold()
-            } else {
-                Text("Gravando")
-                    .buttonStyle(.borderedProminent)
-                    .foregroundStyle(.red)
                     .frame(maxWidth: .infinity, maxHeight: 35)
                     .bold()
             }
+            .buttonStyle(.borderedProminent)
+        } else {
+            ButtonWaveView(isRecording: $isRecording, state: $state, speechRecognizer: speechRecognizer)
         }
-        .buttonStyle(.borderedProminent)
-        .bold()
     }
 }
