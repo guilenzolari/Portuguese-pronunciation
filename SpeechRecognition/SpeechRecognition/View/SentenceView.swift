@@ -15,7 +15,7 @@ struct SentenceView: View {
     @State var speechRecognizer = SpeechRecognizer(targetWord: "")
     @State var isRecording = false
     @State var audioPlayer = AudioPlayerViewModel(audio: "mao", audioFormat: "m4a")
-    @State var sentanceCount = 7
+    @State var sentanceCount = 0
     @State var currentState: ViewState = .start
     
     var body: some View {

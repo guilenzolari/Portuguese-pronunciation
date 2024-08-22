@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
         
         VStack{
@@ -26,7 +29,7 @@ struct SwiftUIView: View {
             Spacer()
             
             Button {
-                
+                dismiss()
             } label: {
                 Text("Continue")
                     .frame(maxWidth: .infinity)
